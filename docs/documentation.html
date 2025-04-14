@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HOS Command Documentation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Commands</h2>
+      <ul id="commandList">
+        <li onclick="showDoc('exit')">exit</li>
+        <li onclick="showDoc('ping')">ping</li>
+        <li onclick="showDoc('netwatch')">netwatch</li>
+        <li onclick="showDoc('help')">help</li>
+        <li onclick="showDoc('version')">version</li>
+        <li onclick="showDoc('echo')">echo</li>
+        <li onclick="showDoc('setport')">setport</li>
+        <li onclick="showDoc('clear')">clear</li>
+      </ul>
+    </aside>
+    <main class="content" id="docContent">
+      <h1>Welcome to HOS Documentation</h1>
+      <p>Select a command from the left to view its documentation.</p>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
