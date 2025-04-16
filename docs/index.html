@@ -3,75 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOS Alpha - A New Experimental OS</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0f0f0f;
-            color: #ffffff;
-        }
-
-        header {
-            background: #1a1a1a;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #bbbbbb;
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #00ccff;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background: #00ccff;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        a.footer-link {
-            color: #118ef5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a.footer-link:hover {
-            text-decoration: underline;
-        }
-
-        .legal {
-            font-size: 0.6rem;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -79,6 +14,7 @@
     <header>
         <h1>HOS Alpha</h1>
         <p>A lightweight, experimental Operating System built from scratch</p>
+        <hr />
     </header>
 
     <section>
@@ -86,6 +22,7 @@
         <p>HOS Alpha is a hobby operating system focused on simplicity, performance, and learning. Built from the ground
             up in low-level languages, it's designed to explore core OS concepts and push the limits of bare-metal
             programming.</p>
+        <hr />
 
         <h2>🔧 Features</h2>
         <ul>
@@ -94,23 +31,108 @@
             <li>Custom memory management (WIP)</li>
             <li>Written in C/C++ with minimal dependencies</li>
         </ul>
+        <hr />
 
         <h2>📦 Source Code</h2>
         <p>Check out the full project on GitHub:</p>
         <a class="button" href="https://github.com/f3fe-hash/HOS-Alpha/" target="_blank">View on GitHub</a>
         <a class="button" href="downloads.html">Download HOS Alpha</a>
         <a class="button" href="documentation.html">View Documentation</a>
+        <hr />
 
+        <h2>🛠️ Getting Started</h2>
+        <p>
+            To build and run HOS Alpha, follow these steps:
+        <ol>
+            <li>Download the OS (Section Above). Either Pre-compiled (Go to #5), or from source (Preferred method)</li>
+            <li>Install dependancies:
+                <ol>
+                    <li>
+                        <p class="os">Linux:</p>
+                        Run: <pre><code>
+sudo apt update && sudo apt upgrade -y && sudo apt install cmake make libssl-dev
+                        </code></pre>
+                    </li> <br />
+
+                    <li>
+                        <p class="os">MacOS:</p>
+                        Run: <pre><code>
+brew update && brew upgrade && brew install cmake make openssl
+                        </code></pre>
+                    </li> <br />
+
+                    <li>
+                        <p class="os">Windows:</p>
+                        <ol>
+                            <li>Download the source code from <a class="link" href="https://cmake.org/download/"
+                                    target="_blank">cmake.org/download</a></li>
+                            <li>Extract it and open a terminal (PowerShell, Git Bash, or MSYS2)</li>
+                            <li>Navigate to the extracted folder and run:
+                                <pre><code>
+cd path/to/cmake-source
+bootstrap
+make
+make install
+                                </code></pre>
+                            </li>
+                            <li>Alternatively, open the <code>.sln</code> file in Visual Studio and build it from there
+                            </li>
+                            <li>Verify installation:
+                                <pre><code>
+cmake --version
+                                </code></pre>
+                            </li>
+                        </ol>
+                    </li>
+
+                </ol>
+            </li>
+            <li>Build the OS:
+                <ol>
+                    <li>Open a terminal and navigate to the HOS Alpha directory</li>
+                    <li>Run the following command:
+                        <pre><code>
+source compile.sh
+                        </code></pre>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Run the OS:
+                <pre><code>
+source compile.sh run
+                </code></pre>
+            </li>
+            <li> Pre-compiled:
+                Go to the <a class="link" href="downloads.html">Downloads</a> page and download the pre-compiled
+                version of HOS Alpha. Extract the zip file to get the raw compiled files. <br />
+                <p>To run the OS type:
+                <pre><code>
+cd /path/to/HOS-Alpha
+./HOS
+                    </code></pre>
+                </p>
+            </li>
+        </ol>
+        </p>
+        <hr />
 
         <h2>📚 Goals</h2>
         <p>This OS is built for educational purposes, with the long-term goal of supporting multitasking, a basic file
             system, and eventually a simple shell.</p>
+        <hr />
+
+        <h2>💬 Contact Me</h2>
+        <p>If you have any questions or suggestions, feel free to reach out:</p>
+        <a class="button" href="mailto:f3fe5.unhash@gmail.com">Email Me</a>
+        <a class="button" href="https://github.com/f3fe-hash">My Github</a>
     </section>
 
     <footer>
-        © 2025 HOS Alpha Project · Built by <a class="footer-link" href="credits.html">The HOS Team</a>
+        © 2025 HOS Alpha Project · Built by <a class="link" href="credits.html">The HOS Team</a>
         <br />
-        <p class="legal">* This is an open-source project (No copyright). <br /> Contributions and remakes are welcome!</p>
+        <p class="legal">* This is an open-source project (No copyright). <br /> Contributions and remakes are welcome!
+        </p>
     </footer>
 
 </body>
