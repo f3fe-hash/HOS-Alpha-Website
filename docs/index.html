@@ -6,7 +6,7 @@
     <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOS Alpha - A New Experimental OS</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -19,25 +19,69 @@
 
     <section>
         <h2>What is HOS Alpha?</h2>
-        <p>HOS Alpha is a hobby operating system focused on simplicity, performance, and learning. Built from the ground
-            up in low-level languages, it's designed to explore core OS concepts and push the limits of bare-metal
-            programming.</p>
+        <p>HOS is a minimalist, modular operating system engineered for maximum transparency, customizability, and
+            developer control.
+            Designed from the ground up in C, it serves as both a functional platform and an educational tool for
+            understanding
+            low-level systems, networking, and OS design.</p>
+        <hr />
+
+
+        <h2>🧠 About the Architecture</h2>
+        <p><strong>HOS Alpha</strong> is a lightweight, modular operating system built entirely in C, optimized for
+            developers and learners who want deep insight into how an OS works at a low level. It is designed to be
+            simple, hackable, and educational.</p>
+
+        <ul>
+            <li><strong>🔧 Modular Design:</strong> Clean separation of responsibilities between networking,
+                cryptography, and system control, making development and debugging easy.</li> <br />
+            <li><strong>🌐 Networking Stack:</strong> Includes custom implementations of packet parsing, diagnostics
+                (e.g., <code>ping</code>), and traffic monitoring tools like <code>netwatch</code> and
+                <code>netroot</code>.</li> <br />
+            <li><strong>🔐 Cryptographic Core:</strong> Provides basic encryption and hashing utilities useful for
+                secure communication and internal data verification.</li> <br />
+            <li><strong>🧰 Developer Tools:</strong> The system is built with clear, macro-driven configuration options
+                and straightforward headers like <code>HOS.h</code> and <code>main.h</code> to simplify extension and
+                usage.</li> <br />
+        </ul>
+
+        <p>Whether you’re experimenting with OS development, testing low-level networking code, or just want an open and
+            modifiable playground, <strong>HOS Alpha</strong> offers a great starting point.</p>
         <hr />
 
         <h2>🔧 Features</h2>
         <ul>
-            <li>Boots on real hardware and emulators (QEMU/Bochs)</li>
             <li>Basic kernel and interrupt handling</li>
-            <li>Custom memory management (WIP)</li>
-            <li>Written in C/C++ with minimal dependencies</li>
+            <li>Custom memory management</li>
+            <li>Written in C with minimal dependencies</li>
         </ul>
         <hr />
 
         <h2>Releases</h2>
         <ol>
-            <li> HOS Alpha v0.0.1 - Basic Terminal and networking tools</li>
-            <li> HOS Alpha v0.0.2 - Focused on upgrading netwatch command & OS structure</li>
+            <li> HOS Alpha v0.0.1: <br />
+                <ul>
+                    <li>First release of HOS!</li>
+                    <li>Basic terminal / cli</li>
+                    <li>Basic networking tools including <code>netwatch</code> and <code>ping</code></li>
+                </ul>
+            </li> <br />
+
+            <li> HOS Alpha v0.0.2: <br />
+                <ul>
+                    <li>Upgraded NetWatch</li>
+                    <li>Cleaner OS file organization & system directory tree</li>
+                </ul>
+            </li> <br />
+
+            <li> HOS Alpha v0.0.3 (sneak-peek): <br />
+                <ul>
+                    <li>New package manager (HPM)!</li>
+                </ul>
+            </li> <br />
+
         </ol>
+        <hr />
 
         <h2>📦 Source Code</h2>
         <p>Check out the full project on GitHub:</p>
@@ -55,14 +99,16 @@
                 <ol>
                     <li>
                         <p class="os">Linux:</p>
-                        Run: <pre><code>
+                        Run:
+                        <pre><code>
 sudo apt update && sudo apt upgrade -y && sudo apt install cmake make libssl-dev
                         </code></pre>
                     </li> <br />
 
                     <li>
                         <p class="os">MacOS:</p>
-                        Run: <pre><code>
+                        Run:
+                        <pre><code>
 brew update && brew upgrade && brew install cmake make openssl
                         </code></pre>
                     </li> <br />
