@@ -105,7 +105,7 @@
 sudo apt update && sudo apt upgrade -y && sudo apt install cmake make libssl-dev
                         </code></pre>
                     </li> <br />
-
+<!--
                     <li>
                         <p class="os">MacOS:</p>
                         Run:
@@ -135,6 +135,7 @@ make install
 cmake --version
                                 </code></pre>
                             </li>
+                            -->
                         </ol>
                     </li>
 
@@ -153,7 +154,7 @@ source compile.sh
             <li>
                 Run the OS:
                 <pre><code>
-source compile.sh run
+source run.sh
                 </code></pre>
             </li>
             <li> Pre-compiled:
@@ -162,7 +163,11 @@ source compile.sh run
                 <p>To run the OS type:
                 <pre><code>
 cd /path/to/HOS-Alpha
-./HOS
+sudo ./HOS
+                    </code></pre><br />You can also run the desktop by running <br /><pre><code>
+sudo ./HOS --gui
+                    </code></pre>or<pre><code>
+sudo ./HOS -g
                     </code></pre>
                 </p>
             </li>

@@ -161,3 +161,7 @@ a {
   padding: 30px;
   overflow-y: auto;
 }
+
+.new-section {
+    text-decoration: underline;
+}
