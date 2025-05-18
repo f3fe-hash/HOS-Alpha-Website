@@ -72,6 +72,44 @@ a.link:hover {
   text-decoration: underline;
 }
 
+.side-button {
+    position: fixed;
+    top: 20%; /* Moved up from 50% to 40% */
+    transform: translateY(-20%);
+    z-index: 1000;
+}
+
+.side-button.left {
+    left: 0;
+    padding-left: 10px;
+}
+
+.side-button.right {
+    right: 0;
+    padding-right: 10px;
+}
+
+.side-button .button {
+    display: inline-block;
+    padding: 20px 28px; /* Increased padding */
+    font-size: 1.4em;    /* Larger text */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px 0 0 10px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.side-button.right .button {
+    border-radius: 0 10px 10px 0;
+}
+
+.side-button .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
 /* downloads.html */
 
 .os-block {
