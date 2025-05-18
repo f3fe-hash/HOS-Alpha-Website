@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta lang="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOS Alpha - A New Experimental OS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>HOS Alpha</h1>
+        <p>A lightweight, experimental Operating System built from scratch</p>
+        <hr />
+    </header>
+
+    <section>
+        <h2>What is HOS Alpha?</h2>
+        <p>HOS is a minimalist, modular operating system engineered for maximum transparency, customizability, and
+            developer control.
+            Designed from the ground up in C, it serves as both a functional platform and an educational tool for
+            understanding
+            low-level systems, networking, and OS design.</p>
+        <hr />
+
+
+        <h2>🧠 About the Architecture</h2>
+        <p><strong>HOS Alpha</strong> is a lightweight, modular operating system built entirely in C, optimized for
+            developers and learners who want deep insight into how an OS works at a low level. It is designed to be
+            simple, hackable, and educational.</p>
+
+        <ul>
+            <li><strong>🔧 Modular Design:</strong> Clean separation of responsibilities between networking,
+                cryptography, and system control, making development and debugging easy.</li> <br />
+            <li><strong>🌐 Networking Stack:</strong> Includes custom implementations of packet parsing, diagnostics
+                (e.g., <code>ping</code>), and traffic monitoring tools like <code>netwatch</code> and
+                <code>netroot</code>.</li> <br />
+            <li><strong>🔐 Cryptographic Core:</strong> Provides basic encryption and hashing utilities useful for
+                secure communication and internal data verification.</li> <br />
+            <li><strong>🧰 Developer Tools:</strong> The system is built with clear, macro-driven configuration options
+                and straightforward headers like <code>HOS.h</code> and <code>main.h</code> to simplify extension and
+                usage.</li> <br />
+        </ul>
+
+        <p>Whether you’re experimenting with OS development, testing low-level networking code, or just want an open and
+            modifiable playground, <strong>HOS Alpha</strong> offers a great starting point.</p>
+        <hr />
+
+        <h2>🔧 Features</h2>
+        <ul>
+            <li>Basic kernel and interrupt handling</li>
+            <li>Custom memory management</li>
+            <li>Written in C with minimal dependencies</li>
+        </ul>
+        <hr />
+
+        <h2>Releases</h2>
+        <ol>
+            <li> HOS Alpha v1.0: <br />
+                <ul>
+                    <li>First release of HOS!</li>
+                    <li>Basic terminal / cli</li>
+                    <li>Basic networking tools including <code>netwatch</code> and <code>ping</code></li>
+                </ul>
+            </li> <br />
+
+            <li> HOS Alpha v1.0.1: <br />
+                <ul>
+                    <li>Upgraded NetWatch</li>
+                    <li>Cleaner OS file organization & system directory tree</li>
+                </ul>
+            </li> <br />
+
+            <li> HOS Alpha v1.1: <br />
+                <ul>
+                    <li>GTK GUI Desktop</li>
+                    <li>Buggy package manager (HPM, HOS Package manager, Not ready to use yet)</li>
+                </ul>
+            </li> <br />
+
+            <li> HOS Alpha v1.1.1:
+                <ul>
+                    <li>NetWatch in GTK GUI</li>
+                    <li>NetWatch CLI bug fixes</li>
+                    <li>First version using Memory Pools</li>
+                </ul>
+            </li> <br />
+
+        </ol>
+        <hr />
+
+        <h2>📦 Source Code</h2>
+        <p>Check out the full project on GitHub:</p>
+        <a class="button" href="https://github.com/f3fe-hash/HOS-Alpha/" target="_blank">View on GitHub</a>
+        <a class="button" href="downloads.html">Download HOS Alpha</a>
+        <a class="button" href="documentation.html">View Documentation</a>
+        <hr />
+
+        <h2>🛠️ Getting Started</h2>
+        <p>
+            To build and run HOS Alpha, follow these steps:
+        <ol>
+            <li>Download the OS (Section Above). Either Pre-compiled (Go to #5), or from source (Preferred method)</li>
+            <li>Install dependancies:
+                <ol>
+                    <li>
+                        <p class="os">Linux:</p>
+                        Run:
+                        <pre><code>
+sudo apt update && sudo apt upgrade -y && sudo apt install cmake make libssl-dev
+                        </code></pre>
+                    </li> <br />
+<!--
+                    <li>
+                        <p class="os">MacOS:</p>
+                        Run:
+                        <pre><code>
+brew update && brew upgrade && brew install cmake make openssl
+                        </code></pre>
+                    </li> <br />
+
+                    <li>
+                        <p class="os">Windows:</p>
+                        <ol>
+                            <li>Download the source code from <a class="link" href="https://cmake.org/download/"
+                                    target="_blank">cmake.org/download</a></li>
+                            <li>Extract it and open a terminal (PowerShell, Git Bash, or MSYS2)</li>
+                            <li>Navigate to the extracted folder and run:
+                                <pre><code>
+cd path/to/cmake-source
+bootstrap
+make
+make install
+                                </code></pre>
+                            </li>
+                            <li>Alternatively, open the <code>.sln</code> file in Visual Studio and build it from there
+                            </li>
+                            <li>Verify installation:
+                                <pre><code>
+cmake --version
+                                </code></pre>
+                            </li>
+                            -->
+                        </ol>
+                    </li>
+
+                </ol>
+            </li>
+            <li>Build the OS:
+                <ol>
+                    <li>Open a terminal and navigate to the HOS Alpha directory</li>
+                    <li>Run the following command:
+                        <pre><code>
+source compile.sh
+                        </code></pre>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Run the OS:
+                <pre><code>
+source run.sh
+                </code></pre>
+            </li>
+            <li> Pre-compiled:
+                Go to the <a class="link" href="downloads.html">Downloads</a> page and download the pre-compiled
+                version of HOS Alpha. Extract the zip file to get the raw compiled files. <br />
+                <p>To run the OS type:
+                <pre><code>
+cd /path/to/HOS-Alpha
+sudo ./HOS
+                    </code></pre><br />You can also run the desktop by running <br /><pre><code>
+sudo ./HOS --gui
+                    </code></pre>or<pre><code>
+sudo ./HOS -g
+                    </code></pre>
+                </p>
+            </li>
+        </ol>
+        </p>
+        <hr />
+
+        <h2>📚 Goals</h2>
+        <p>This OS is built for educational purposes, with the long-term goal of supporting multitasking, a basic file
+            system, and eventually a simple shell.</p>
+        <hr />
+
+        <h2>💬 Contact Me</h2>
+        <p>If you have any questions or suggestions, feel free to reach out:</p>
+        <a class="button" href="https://discord.gg/VzPpWCYd">Join my Discord</a>
+        <a class="button" href="https://github.com/f3fe-hash">My Github</a>
+    </section>
+
+    <footer>
+        © 2025 HOS Alpha Project · Built by <a class="link" href="credits.html">The HOS Team</a>
+        <br />
+        <p class="legal">* This is an open-source project (No copyright). <br /> Contributions and remakes are welcome!
+        </p>
+    </footer>
+
+</body>
+
+</html>
