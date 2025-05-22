@@ -1,22 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: HPM</title>
+    <title>HOS Command Manual: hpm</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>HPM</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Package manager for HOS</p>
-        <p><strong>Arguments:</strong> &lt;command&gt; &lt;package&gt; &lt;url (Not used for purge)&gt;</p>
-        <p><strong>Usage:</strong> <code>hpm &lt;command&gt; &lt;package&gt; &lt;url (Not used for purge)&gt;</code></p>
-        <p><strong>Example:</strong> <code>hpm install dummy https://github.com/f3fe-hash/dummy-package.git</code> (It does work)</p>
-        <p><strong>Output:</strong> The package is installed</p>
-    </div>
-    <img src="img/hpm.png" alt="HPM command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>HPM(1)</h1>
+
+        <p class="section-title">NAME</p>
+        <p><code>hpm</code> — HOS package manager for installing, removing, and managing packages</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>hpm &lt;command&gt; [&lt;args&gt;]</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>
+            Manages HOS packages including installation, removal, and updates.
+            Supports commands like <code>install</code>, <code>remove</code>, <code>list</code>, and <code>update</code>.
+        </p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;command&gt;</code> — subcommand to run (install, remove, list, update)</li>
+            <li><code>&lt;args&gt;</code> — arguments for the subcommand</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Install a package named 'examplepkg'
+hpm install examplepkg
+
+# Remove a package
+hpm remove examplepkg
+
+# List installed packages
+hpm list</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>Varies depending on subcommand, typically status messages and package lists.</p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — success</li>
+            <li><code>1</code> — failure due to invalid command or package</li>
+        </ul>
+    </main>
 </body>
+
 </html>

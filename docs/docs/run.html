@@ -1,22 +1,56 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: Run</title>
+    <title>HOS Command Manual: run</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>Run</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Executes a program or script in HOS.</p>
-        <p><strong>Arguments:</strong> &lt;executable&gt; [args...]</p>
-        <p><strong>Usage:</strong> <code>run &lt;executable&gt; [args...]</code></p>
-        <p><strong>Example:</strong> <code>run dummy 1 2 3 4</code></p>
-        <p><strong>Output:</strong> The specified program is executed with the gived arguments.</p>
-    </div>
-    <img src="img/run.png" alt="Run command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>RUN(1)</h1>
+        <p class="section-title">NAME</p>
+        <p><code>run</code> — execute a package installed via HPM</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>run &lt;package-name&gt;</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>
+            Executes the specified HOS package that was previously installed using the
+            <code>hpm</code> command. This will run the package's main executable, assuming it's present
+            and marked as runnable.
+        </p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;package-name&gt;</code> — The name of the package to execute.</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Run a package named 'dummy'
+run dummy</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>If successful, the package will begin execution in the terminal or GUI, depending on its type.</p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — success</li>
+            <li><code>1</code> — failed to locate or execute package</li>
+        </ul>
+
+        <p class="section-title">SEE ALSO</p>
+        <ul>
+            <li><code><a href="#" onclick="showDoc('hpm')">hpm(1)</a></code> — package installer</li>
+        </ul>
+
+        <img src="img/run.png" alt="Example of run command in use" class="command-img" />
+
+    </main>
 </body>
+
 </html>

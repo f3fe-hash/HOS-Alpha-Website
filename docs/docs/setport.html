@@ -1,22 +1,48 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: SetPort</title>
+    <title>HOS Command Manual: setport</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>SetPort</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Set the port HOS is connected to.</p>
-        <p><strong>Arguments:</strong> &lt;port&gt;</p>
-        <p><strong>Usage:</strong> <code>setport &lt;port&gt;</code></p>
-        <p><strong>Example:</strong> <code>setport 8080</code></p>
-        <p><strong>Output:</strong> none</p>
-    </div>
-    <img src="img/setport.png" alt="SetPort command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>SETPORT(1)</h1>
+
+        <p class="section-title">NAME</p>
+        <p><code>setport</code> — configure the network port for HOS services</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>setport &lt;port-number&gt;</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>
+            Sets the network port that HOS services will listen on.
+            Useful for changing default ports or avoiding conflicts.
+        </p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;port-number&gt;</code> — the TCP or UDP port number to set (1-65535)</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Set port to 8080
+setport 8080</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>Confirms the port has been set or reports errors.</p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — success</li>
+            <li><code>1</code> — invalid port number or error</li>
+        </ul>
+    </main>
 </body>
+
 </html>

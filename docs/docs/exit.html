@@ -1,22 +1,48 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: Exit</title>
+    <title>HOS Command Manual: exit</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>Exit</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Exits the OS and enters back into the Linux terminal.</p>
-        <p><strong>Arguments:</strong> None</p>
-        <p><strong>Usage:</strong> <code>exit</code></p>
-        <p><strong>Example:</strong> <code>exit</code></p>
-        <p><strong>Output:</strong> The screen is cleared and you are back in the Linux terminal.</p>
-    </div>
-    <img src="img/exit.png" alt="Exit command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>EXIT(1)</h1>
+
+        <p class="section-title">NAME</p>
+        <p><code>exit</code> — terminate the current shell or session</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>exit [&lt;status&gt;]</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>Ends the current terminal session or shell. Optionally, a numeric exit status can be provided.</p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;status&gt;</code> — optional exit status code (default is 0)</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Exit with status 0 (success)
+exit
+
+# Exit with status 1 (error)
+exit 1</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>Closes the current terminal or shell session.</p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — success (default)</li>
+            <li><code>any other number</code> — returned as exit status</li>
+        </ul>
+    </main>
 </body>
+
 </html>

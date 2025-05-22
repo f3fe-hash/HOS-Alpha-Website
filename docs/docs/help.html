@@ -1,22 +1,48 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: Help</title>
+    <title>HOS Command Manual: help</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>Help</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Displays the help file (help.txt) on screen.</p>
-        <p><strong>Arguments:</strong> None</p>
-        <p><strong>Usage:</strong> <code>help</code></p>
-        <p><strong>Example:</strong> <code>help</code></p>
-        <p><strong>Output:</strong> The help file is displayed on screen.</p>
-    </div>
-    <img src="img/help.png" alt="Help command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>HELP(1)</h1>
+
+        <p class="section-title">NAME</p>
+        <p><code>help</code> — display help information for HOS commands</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>help [&lt;command&gt;]</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>Shows usage information and details about the specified command. If no command is given, lists all available commands.</p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;command&gt;</code> — the command to get help for (optional)</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Show general help listing
+help
+
+# Show help for the 'run' command
+help run</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>Displays help text in the terminal.</p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — success</li>
+            <li><code>1</code> — unknown command specified</li>
+        </ul>
+    </main>
 </body>
+
 </html>

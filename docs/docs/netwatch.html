@@ -1,22 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: NetWatch</title>
+    <title>HOS Command Manual: netwatch</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>NetWatch</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Watches all packets on a certain network interface.</p>
-        <p><strong>Arguments:</strong> &lt;interface&gt; &lt;max hosts&gt;</p>
-        <p><strong>Usage:</strong> <code>netwatch &lt;interface&gt; &lt;max hosts to display&gt;</code></p>
-        <p><strong>Example:</strong> <code>netwatch wlo0 15</code></p>
-        <p><strong>Output:</strong> Displays the packets on the network interface.</p>
-    </div>
-    <img src="img/netwatch.png" alt="NetWatch command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>NETWATCH(1)</h1>
+
+        <p class="section-title">NAME</p>
+        <p><code>netwatch</code> — monitor network packets on an interface</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>netwatch &lt;interface&gt; &lt;max hosts&gt;</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>
+            Monitors all network packets passing through the specified network interface.
+            Displays details about hosts and traffic, limited to the maximum number of hosts specified.
+        </p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;interface&gt;</code> — the network interface to monitor (e.g., <code>wlo0</code>, <code>eth0</code>)</li>
+            <li><code>&lt;max hosts&gt;</code> — maximum number of hosts to display</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Monitor wireless interface wlo0, showing up to 15 hosts
+netwatch wlo0 15</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>
+            Continuously displays packet information and host activity on the selected interface.
+            Output is updated in real time, showing packet counts, host IPs, and other network data.
+        </p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — monitoring started successfully</li>
+            <li><code>1</code> — invalid interface, permission error, or other failure</li>
+        </ul>
+
+        <p class="section-title">SEE ALSO</p>
+        <ul>
+            <li><code><a href="ping.html">ping(1)</a></code> — test network connectivity</li>
+            <li><code><a href="setport.html">setport(1)</a></code> — configure network ports</li>
+        </ul>
+
+        <img src="img/netwatch.png" alt="Example of netwatch command in use" class="command-img" />
+    </main>
 </body>
+
 </html>

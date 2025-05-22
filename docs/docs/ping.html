@@ -1,22 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta lang="en-us" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Command: Ping</title>
+    <title>HOS Command Manual: ping</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <a href="index.html" class="back-button">&larr; Back to Home</a>
-    <h1>Ping</h1>
-    <hr />
-    <div class="command-doc">
-        <p><strong>Description:</strong> Pings a host a certain number of times with a timeout.</p>
-        <p><strong>Arguments:</strong> &lt;packets&gt; &lt;packet size&gt; &lt;hostname / IP&gt; &lt;timeout (microseconds, 10<sup>-6</sup> sec)&gt;</p>
-        <p><strong>Usage:</strong> <code>ping &lt;packets&gt; &lt;packet size&gt; &lt;hostname / IP&gt; &lt;timeout&gt;</code></p>
-        <p><strong>Example:</strong> <code>ping 10 64 8.8.8.8 10000</code></p>
-        <p><strong>Output:</strong> Displays the ping results.</p>
-    </div>
-    <img src="img/ping.png" alt="Ping command example" />
+    <a href="index.html" class="back-button">&larr; Back to Command Index</a>
+    <main class="man-page">
+        <h1>PING(1)</h1>
+
+        <p class="section-title">NAME</p>
+        <p><code>ping</code> — send ICMP echo requests to network hosts</p>
+
+        <p class="section-title">SYNOPSIS</p>
+        <pre><code>ping &lt;host&gt; [count]</code></pre>
+
+        <p class="section-title">DESCRIPTION</p>
+        <p>
+            Sends ICMP echo request packets to a specified host to check connectivity and measure round-trip time.
+            Optionally specify the number of requests to send.
+        </p>
+
+        <p class="section-title">ARGUMENTS</p>
+        <ul>
+            <li><code>&lt;host&gt;</code> — hostname or IP address to ping</li>
+            <li><code>[count]</code> — optional number of ping requests (default is unlimited)</li>
+        </ul>
+
+        <p class="section-title">EXAMPLES</p>
+        <pre><code># Ping google.com indefinitely
+ping google.com
+
+# Ping 8.8.8.8 five times
+ping 8.8.8.8 5</code></pre>
+
+        <p class="section-title">OUTPUT</p>
+        <p>Displays ICMP reply details including response times.</p>
+
+        <p class="section-title">EXIT STATUS</p>
+        <ul>
+            <li><code>0</code> — success</li>
+            <li><code>1</code> — host unreachable or error</li>
+        </ul>
+    </main>
 </body>
+
 </html>
