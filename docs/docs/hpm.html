@@ -17,7 +17,7 @@
         <p><code>hpm</code> — HOS package manager for installing, removing, and managing packages</p>
 
         <p class="section-title">SYNOPSIS</p>
-        <pre><code>hpm &lt;command&gt; [&lt;args&gt;]</code></pre>
+        <pre><code>hpm &lt;command&gt; [args, usually package]</code></pre>
 
         <p class="section-title">DESCRIPTION</p>
         <p>
@@ -32,14 +32,14 @@
         </ul>
 
         <p class="section-title">EXAMPLES</p>
-        <pre><code># Install a package named 'examplepkg'
-hpm install examplepkg
+        <pre><code># Download a package named 'dummy' (This is a real package)
+hpm download dummy
 
-# Remove a package
-hpm remove examplepkg
+# Install a package named 'dummy'
+hpm install dummy
 
-# List installed packages
-hpm list</code></pre>
+# Purge a package
+hpm purge dummy</code></pre>
 
         <p class="section-title">OUTPUT</p>
         <p>Varies depending on subcommand, typically status messages and package lists.</p>
